@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply poppins-regular text-sm;
+  }
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
