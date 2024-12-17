@@ -1,37 +1,39 @@
 import { TRecipe, TRecipes, TUsers, TUser, TSearch } from "../types";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export async function getAllRecipes(): Promise<TRecipes> {
-  const response = await fetch("/api/recipes");
+  const response = await fetch(`${API_URL}/recipes`);
   const result = await response.json();
   return result;
 }
 
 export async function getUniqueRecipe(id: string): Promise<TRecipe> {
-  const response = await fetch(`/api/recipes/${id}`);
+  const response = await fetch(`${API_URL}/recipes/${id}`);
   const result = await response.json();
   return result;
 }
 
 export async function getRecipesByCategory(id: string): Promise<TRecipes> {
-  const response = await fetch(`/api/recipes/categories/${id}`);
+  const response = await fetch(`${API_URL}/recipes/categories/${id}`);
   const result = await response.json();
   return result;
 }
 
 export async function getAllUsers(): Promise<TUsers> {
-  const response = await fetch("/api/users");
+  const response = await fetch("${API_URL}/users");
   const result = await response.json();
   return result;
 }
 
 export async function getUniqueUser(id: string): Promise<TUser> {
-  const response = await fetch(`/api/users/${id}`);
+  const response = await fetch(`${API_URL}/users/${id}`);
   const result = await response.json();
   return result;
 }
 
 export async function getSearch(id: string): Promise<TSearch> {
-  const response = await fetch(`/api/search?q=${id}`);
+  const response = await fetch(`${API_URL}/search?q=${id}`);
   const result = await response.json();
   return result;
 }
@@ -42,7 +44,7 @@ export async function getAuth(body: {
   lastName: string;
   imageUrl: string;
 }) {
-  const response = await fetch("/api/auth-callback", {
+  const response = await fetch("${API_URL}/auth-callback", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -62,7 +64,7 @@ export async function createRecipe(body: {
   ingredients: string[];
   instructions: string[];
 }) {
-  const response = await fetch("/api/recipes/add-recipe", {
+  const response = await fetch("${API_URL}/recipes/add-recipe", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
