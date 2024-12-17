@@ -21,7 +21,7 @@ export async function getRecipesByCategory(id: string): Promise<TRecipes> {
 }
 
 export async function getAllUsers(): Promise<TUsers> {
-  const response = await fetch("${API_URL}/users");
+  const response = await fetch(`${API_URL}/users`);
   const result = await response.json();
   return result;
 }
