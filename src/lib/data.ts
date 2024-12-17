@@ -44,7 +44,7 @@ export async function getAuth(body: {
   lastName: string;
   imageUrl: string;
 }) {
-  const response = await fetch("${API_URL}/auth-callback", {
+  const response = await fetch(`${API_URL}/auth-callback`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export async function createRecipe(body: {
   ingredients: string[];
   instructions: string[];
 }) {
-  const response = await fetch("${API_URL}/recipes/add-recipe", {
+  const response = await fetch(`${API_URL}/recipes/add-recipe`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
