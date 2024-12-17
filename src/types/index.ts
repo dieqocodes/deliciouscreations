@@ -1,5 +1,22 @@
-import { Recipes, Users } from "@prisma/client";
+type Users = {
+  id: string;
+  createdAt: Date;
+  imageUrl: string;
+  firstName: string;
+  lastName: string | null;
+};
 
+type Recipes = {
+  name: string;
+  id: string;
+  userId: string;
+  createdAt: Date;
+  description: string;
+  imageUrl: string;
+  category: string;
+  ingredients: string[];
+  instructions: string[];
+};
 export interface TRecipes {
   success: boolean;
   data?: Recipes[];
