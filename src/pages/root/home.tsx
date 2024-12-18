@@ -13,7 +13,7 @@ export default function Home() {
   });
 
   return (
-    <MaxWidthWrapper className="w-full min-h-[90vh] flex flex-col gap-10 items-center justify-center">
+    <MaxWidthWrapper className="w-full min-h-[90vh] flex flex-col gap-10 items-center justify-center py-10 md:py-0">
       <p className="text-4xl md:text-7xl poppins-semibold text-center leading-tight">
         Find or create your <br className="md:hidden" />
         perfect <br className="hidden md:inline" />
