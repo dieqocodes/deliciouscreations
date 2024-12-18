@@ -19,7 +19,7 @@ export default function User() {
         </div>
       ) : (
         <>
-          <div className="w-full h-[20vh] flex items-center gap-4 justify-start">
+          <div className="w-full min-h-[20vh] flex items-center gap-4 justify-start">
             <img
               src={data?.data?.imageUrl}
               alt={data?.data?.firstName}

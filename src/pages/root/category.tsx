@@ -19,7 +19,7 @@ export default function Category() {
   );
   return (
     <MaxWidthWrapper className="py-10">
-      <div className="w-full h-[15vh] flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center gap-8 md:gap-0">
+      <div className="w-full min-h-[15vh] flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center gap-8 md:gap-0">
         <p className="text-4xl poppins-semibold capitalize">{id}</p>
         <div className="w-[400px] flex gap-2 items-center bg-gray-100 px-8 py-4 rounded-full">
           <Search size={15} />
