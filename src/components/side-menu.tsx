@@ -29,7 +29,9 @@ export default function SideMenu() {
             </div>
           </Link>
           <SignOutButton>
-            <button className="w-full p-4 bg-red-400 mt-8">Sign Out</button>
+            <button className="w-full p-4 bg-red-400 mt-8 text-white">
+              Sign Out
+            </button>
           </SignOutButton>
         </SignedIn>
         <SignedOut>
@@ -39,7 +41,7 @@ export default function SideMenu() {
             </div>
           </Link>
           <Link to="/sign-up">
-            <button className="w-full p-4 bg-white text-black mt-8">
+            <button className="w-full p-4 bg-black text-white mt-8">
               Get Started
             </button>
           </Link>
