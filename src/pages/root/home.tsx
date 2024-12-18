@@ -14,20 +14,21 @@ export default function Home() {
 
   return (
     <MaxWidthWrapper className="w-full h-[90vh] flex flex-col gap-10 items-center justify-center">
-      <p className="text-7xl poppins-semibold text-center leading-tight">
-        Find or create your perfect
-        <br />
+      <p className="text-4xl md:text-7xl poppins-semibold text-center leading-tight">
+        Find or create your <br className="md:hidden" />
+        perfect <br className="hidden md:inline" />
         recipe book
       </p>
       <SearchForm />
       <div
         className={cn(
-          "w-full min-h-[200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4",
-          isLoading ? "place-items-center" : "place-items-start"
+          "w-full min-h-[200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         )}
       >
         {isLoading ? (
-          <Loader2 size={15} className="animate-spin" />
+          <div className="col-span-4 h-[200px] grid place-items-center">
+            <Loader2 size={15} className="animate-spin" />
+          </div>
         ) : (
           data?.data?.map((i) => (
             <Link to={`/recipes/${i.id}`} key={i.id} className="w-full">

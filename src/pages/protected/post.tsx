@@ -124,8 +124,8 @@ export default function Post() {
               Create
             </button>
           </div>
-          <div className="flex gap-8">
-            <div className="w-1/2 flex flex-col gap-8">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="w-full md:w-1/2 flex flex-col gap-8">
               {/* Recipe Name */}
               <Controller
                 name="name"
@@ -209,7 +209,7 @@ export default function Post() {
                 </Dropzone>
               </div>
             </div>
-            <div className="w-1/2 flex flex-col gap-8">
+            <div className="w-full md:w-1/2 flex flex-col gap-8">
               {/* Recipe Ingredients */}
               <div className="flex flex-col items-start gap-2">
                 <p className="text-lg poppins-semibold">Ingredients</p>

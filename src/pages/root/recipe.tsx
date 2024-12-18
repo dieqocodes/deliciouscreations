@@ -13,7 +13,7 @@ export default function Recipe() {
 
   return (
     <MaxWidthWrapper className="py-10">
-      <div className="w-1/2 min-h-[10vh] mx-auto flex flex-col gap-8">
+      <div className="w-full md:w-1/2 min-h-[10vh] mx-auto flex flex-col gap-8">
         {isLoading ? (
           <div className="w-full h-[20vh] grid place-items-center">
             <Loader2 size={15} className="animate-spin" />

@@ -1,12 +1,15 @@
 import MaxWidthWrapper from "./max-width-wrapper";
 import { Link, useLocation } from "react-router-dom";
 import { NAV_LINKS } from "../constants";
-import { ArrowRight, User } from "lucide-react";
+import { ArrowRight, Menu, User, X } from "lucide-react";
 import { SignedIn, SignedOut, SignOutButton } from "@clerk/clerk-react";
 import { cn } from "../lib/utils";
+import { useSideMenuStore } from "../store/sideMenuStore";
+import SideMenu from "./side-menu";
 
 export default function Nav() {
   const location = useLocation();
+  const { initial, handleInitial } = useSideMenuStore();
 
   return (
     <div className="w-full h-20 border-b sticky top-0 bg-white z-50">
@@ -14,7 +17,7 @@ export default function Nav() {
         <Link to="/">
           <p className="lobster-regular text-4xl">delicious</p>
         </Link>
-        <nav className="flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((i) => (
             <Link to={i.href} key={i.id}>
               <div className="flex items-center gap-1">
@@ -57,7 +60,14 @@ export default function Nav() {
             </Link>
           </SignedOut>
         </nav>
+        <button
+          className="md:hidden p-2 bg-black text-white relative z-50"
+          onClick={handleInitial}
+        >
+          {initial ? <X size={15} /> : <Menu size={15} />}
+        </button>
       </MaxWidthWrapper>
+      <SideMenu />
     </div>
   );
 }

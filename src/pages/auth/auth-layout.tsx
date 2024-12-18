@@ -10,7 +10,7 @@ export default function AuthLayout() {
   }
   return (
     <div className="w-full h-screen flex">
-      <div className="w-1/2 h-full relative">
+      <div className="hidden md:inline w-1/2 h-full relative">
         <Link to="..">
           <div className="absolute top-10 left-10 flex items-center gap-1 text-white">
             <ArrowLeft size={15} />
@@ -23,7 +23,13 @@ export default function AuthLayout() {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="w-1/2 h-full grid place-items-center">
+      <div className="w-full md:w-1/2 h-full grid place-items-center relative">
+        <Link to=".." className="absolute top-10 left-10">
+          <div className="flex items-center gap-1 text-black">
+            <ArrowLeft size={15} />
+            Back
+          </div>
+        </Link>
         <Outlet />
       </div>
     </div>

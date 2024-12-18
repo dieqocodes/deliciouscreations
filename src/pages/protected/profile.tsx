@@ -20,8 +20,8 @@ export default function Profile() {
         </div>
       ) : (
         <>
-          <div className="w-full h-[20vh] flex items-center justify-between">
-            <div className="flex items-center gap-4">
+          <div className="w-full min-h-[20vh] flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
+            <div className="w-full md:w-auto flex items-center gap-4">
               <img
                 src={data?.data?.imageUrl}
                 alt={data?.data?.firstName}
@@ -32,8 +32,8 @@ export default function Profile() {
                 {data?.data?.lastName !== "null" && data?.data?.lastName}
               </p>
             </div>
-            <Link to="/profile/post">
-              <button className="px-4 py-2 bg-black text-white flex items-center gap-1">
+            <Link to="/profile/post" className="w-full md:w-auto">
+              <button className="w-full px-4 py-4 md:py-2 bg-black text-white flex justify-center items-center gap-1">
                 <PlusCircle size={15} />
                 Post
               </button>

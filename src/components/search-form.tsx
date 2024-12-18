@@ -24,7 +24,7 @@ export default function SearchForm() {
     <FormProvider {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-1/2 px-8 py-4 bg-gray-100 rounded-full flex items-center gap-2"
+        className="w-full md:w-1/2 px-8 py-4 bg-gray-100 rounded-full flex items-center gap-2"
       >
         <Search size={15} />
         <Controller
