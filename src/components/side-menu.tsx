@@ -12,7 +12,7 @@ export default function SideMenu() {
     <motion.div
       initial={{ width: 0 }}
       animate={{ width: initial ? "100%" : 0 }}
-      className="md:hidden bg-black fixed top-0 right-0 h-full pt-20 text-white"
+      className="md:hidden bg-white fixed top-0 right-0 h-full pt-20"
     >
       <MaxWidthWrapper className="flex flex-col">
         {NAV_LINKS.map((i) => (
