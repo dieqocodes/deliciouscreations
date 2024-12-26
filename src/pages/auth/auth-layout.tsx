@@ -25,7 +25,7 @@ export default function AuthLayout() {
       </div>
       <div className="w-full md:w-1/2 h-full grid place-items-center relative">
         <Link to=".." className="absolute top-10 left-10">
-          <div className="flex items-center gap-1 text-black">
+          <div className="flex md:hidden items-center gap-1 text-black">
             <ArrowLeft size={15} />
             Back
           </div>
