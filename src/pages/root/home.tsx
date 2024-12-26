@@ -1,4 +1,4 @@
-import { UtensilsCrossed, Users, BookOpen, Share2 } from "lucide-react";
+import { Users, BookOpen, Share2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SearchForm from "../../components/search-form";
 import MaxWidthWrapper from "../../components/max-width-wrapper";
